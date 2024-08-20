@@ -1,0 +1,43 @@
+spring:
+   application:
+      name: StoreGateway
+      
+   cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          
+      routes:
+
+        - id: appleService-route
+
+          uri: lb://STOREAPPLESERVICE/api/service
+
+          predicates:
+
+         #   - Path=/createapple/**
+            
+            - Path=/fetchApple/**
+            
+
+#        - id: lbservice2-route
+#
+#          uri: lb://LBSERVICE2
+#
+#          predicates:
+#
+#            - Path=/test2/**
+            
+        
+     
+     
+server:
+  port: 8099
+  
+  
+management:
+  endpoint:
+  
+    gateway:
+      enabled: true

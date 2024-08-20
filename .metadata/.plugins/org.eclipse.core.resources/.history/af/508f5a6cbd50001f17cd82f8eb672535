@@ -1,0 +1,9 @@
+spring.application.name=Store
+spring.datasource.url =admin.cng20k0o813h.ap-southeast-2.rds.amazonaws.com
+spring.datasource.username = admin
+spring.datasource.password = nsj34567JSN
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+server.port=5000
